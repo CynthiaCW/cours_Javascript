@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width"> <!-- Taille du viewport à utiliser. Je vous conseiller de copier cette ligne sur tous vos projets -->
+		<link rel="stylesheet" href="bike.css">
+		<title>  Les fonctions </title>
+
+	</head>
+
+	<body>
+	<header>
+	  	<div id="logo">
+	    	<img src="bikeLogo.jpg" alt="logo" id="monImage"/>
+	  	</div>
+	</header>
+
+	<div class="container">
+
+	  <h1 id='monH1'>Bienvenue sur mon site !</h1>
+
+	  <p id='p1'><b>Paragraph #1</b> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+	  <p id='p2'><b>Paragraph #2 </b> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		<div id="maDiv1">
+			DIV ONE 
+		</div>
+		<div id="maDiv2">
+			DIV TWO 
+		</div>
+		<div id="maDiv3">
+			DIV THREE
+		</div>
+		<div id="maDiv4">
+			DIV FOUR
+		</div>
+		<div id="maDiv5">
+			DIV FIVE
+		</div>
+		<div id="maDiv6">
+			DIV SIX
+		</div>
+		<div id="maDiv7">
+			DIV SEVEN
+		</div>
+
+	</div>
+	
+
+	</body>
+
+	<script>
+
+		let codePromo = "DesignerWeb"
+
+		// si un code promo est fourni et valide,
+		// on applique -10% sur le total 
+
+		function prixTotal(prix,qty,codePromoSaisi){
+			let prixFinal   = prix*qty
+			let prixCalcule = prixFinal
+
+			if(codePromo == codePromoSaisi){
+				prixCalcule = prixFinal*0.9
+			}
+			console.log("total à payer : "+prixCalcule+"€")
+
+			
+		}
+
+		// premier test avec 5 biscuits à 3e 
+		// et code promo invalide 
+
+		prixTotal(3,5,'fichtre')
+		
+		// deuxième test avec 2 hoodies a 50 
+		// et code promo valide 
+
+		prixTotal(50,2,"DesignerWeb")
+
+
+
+	</script>
+</html>

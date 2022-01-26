@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+
+    <title> Echiquier </title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="bootstrap/bootstrap.min.css" rel="stylesheet">
+    <style>
+
+      html, body {
+          background-color: #676363;
+          min-width: 500px;
+
+        }
+
+      header {
+        color: #ff7315;
+        text-align: center;
+        font-size: 3em;
+      }
+
+      .container{
+        margin: 0 auto;
+        width: 900px; 
+      }
+      .damier{
+        
+        width: 800px; 
+        height:800px;
+        display: grid;
+        border:1px solid grey;
+        grid-template-columns: repeat(8, 100px);
+        grid-template-rows: repeat(8, 100px);
+      }
+
+      .tile{
+        width:100px;
+        height:100px;
+        border:1px solid grey;
+        color:lime;
+        text-align: center;
+
+      }
+      .white{
+        background-color: white;
+      }
+      .black{
+        background-color: black;
+      }
+      .buisson{
+        background-image: url('https://e7.pngegg.com/pngimages/478/23/png-clipart-green-bushes-green-bush.png');
+         background-position: center; /* Center the image */
+         
+         background-size: cover; /* Resize the background image to cover the entire container */
+      }
+
+
+    </style>
+  </head>
+  <body>
+
+
+  <div class="container">
+    <div class="damier">
+
+    </div>
+  </div>
+
+
+</body>
+
+<script type="text/javascript">
+
+
+  const LEVEL = [
+      ['.','🍀','.','','','','','.'],
+      ['.','.','','','','','.','.'],
+      ['','.','.','.','','','','.'],
+      ['.','','.','','🍀','','.','.'],
+      ['','.','.','','.','','.','.'],
+      ['.','','.','','','','.','.'],
+      ['.','.','.','.','.','.','.','.'],
+      ['','','.','','','','.','.']
+  ]
+
+
+  // boucle pour les "row"
+  for (var i = 0; i < LEVEL.length; i++) {
+    //boucle pour les "col"
+    let col = LEVEL[i]
+    for (var k = 0; k < col.length; k++) {
+      const uneTile = document.createElement('div')
+      uneTile.classList.add('tile');
+      if(LEVEL[i][k]=='.'){ // petite astuce pour l'alternance des blancs et des noirs
+         uneTile.classList.add('black');
+      }else if(LEVEL[i][k]=='🍀'){
+        uneTile.classList.add('buisson');
+      }else{
+        uneTile.classList.add('white');
+      }
+      document.querySelector('.damier').appendChild(uneTile)
+    }
+    
+  }
+
+
+
+
+</script>
+
+
+
+
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width">
+		<title> Les tableaux (Array) Intro </title>
+	</head>
+	<body>
+	</body>
+	<script>
+
+		let prenom  = 'Bob'
+		// je crée un nouveau tableau / array 
+		let hobbies = [
+			"vélo",
+			"kayak",
+			"lecture",
+			"dormir"
+		]
+
+		// pouvoir récupérer le nombre de hobbies
+		let nbHobbies = hobbies.length
+		console.log(nbHobbies)
+
+		// pour solliciter un élément du tableau
+		// on utilise sa position (index)
+
+		console.log(hobbies[2]) // ici lecture 
+		// pour attraper le dernier élèment
+		// on utilisera donc monTableau.length-1 
+
+		console.log(hobbies[hobbies.length-1])
+
+		hobbies[3] = 'rester actif'
+
+		console.log(hobbies)
+		console.table(hobbies)
+
+		// quelques méthodes utiles 
+		// .push() > rajouter un élément à la FIN du tableau
+		hobbies.push('aviron')
+		console.log('avant POP')
+		console.log(hobbies)
+		
+		// pop() // retirer le dernier élément du tableau
+
+		hobbies.pop()
+		console.log('après POP')
+		console.log(hobbies)
+
+		// si j'ai besoin de "flusher"/ vider son tableau
+		// hobbies.length = 0
+		// ou plus évident hobbies = []
+
+		console.log(hobbies)
+
+		// transformer un tableau en chaine de character 
+		// avec join()
+
+		console.log(hobbies.join())
+
+		let users = "Pi chun;Bernard;Coraline;Lucas"
+		// ici on souhaite faire l'inverse d'un join
+		// on transforme une string en array
+		let arrayUsers = users.split(';')
+
+		console.log(arrayUsers)
+
+		console.log(arrayUsers.reverse())
+	
+
+	</script>
+</html>

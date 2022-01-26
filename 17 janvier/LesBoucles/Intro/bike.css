@@ -1,0 +1,37 @@
+html, body {
+  padding: 0;
+  margin: 0;
+  font-family: arial;
+  background-color: #bcc2fc;
+}
+
+header {
+  background-color: #f9e4df;
+  text-align: center;
+  padding: 15px;
+  color: white;
+  transition:all .2s ease-in;
+}
+p {
+    background-color: pink;
+}
+
+.container {
+  width: 800px;
+  margin: 0 auto;
+}
+
+#btn-container{
+    justify-content:center;
+    display: flex;
+}
+.colorDiv {
+    width:30px;
+    height:30px;
+    border-radius:50%;
+    margin-left:4px;
+}
+
+.selectedDiv {
+  box-shadow: rgb(85, 91, 255) 0px 0px 0px 3px, rgb(31, 193, 27) 0px 0px 0px 6px, rgb(255, 217, 19) 0px 0px 0px 9px, rgb(255, 156, 85) 0px 0px 0px 12px, rgb(255, 85, 85) 0px 0px 0px 15px;
+}

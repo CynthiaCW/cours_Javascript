@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width"> <!-- Taille du viewport à utiliser. Je vous conseiller de copier cette ligne sur tous vos projets -->
+		<link rel="stylesheet" href="sun.css">
+		<title>Conditions & dates</title> <!-- Titre de la page -->
+
+	</head>
+
+	<body>
+		<header>
+	  	<div id="logo" >
+	    	<img src="sunset.jpg" alt="logo" id="monImage"/>
+	  	</div>
+	</header>
+
+	<div class="container">
+
+	  <h1 id='title'>Bienvenue sur mon site !</h1>
+	  <p id='monP1'>
+		Un petit paragraphe quand tout va bien 💃
+	  </p>
+	  <p id='erreurSystem'>
+		🤷‍♀️ Attention il y a une petite erreur dans le système a injection
+	  </p>
+
+	</div>
+	</body>
+	<script>
+		// on crée ou on instancie un objet Date()
+		let aujourdhui = new Date()
+		var lheure   = aujourdhui.getHours();
+		console.log(aujourdhui);
+		var dateIso  = aujourdhui.toISOString();
+		console.log(dateIso); // une string
+		document.getElementById('title').innerHTML =dateIso.substr(0,10);
+
+		var monImage = document.getElementById('monImage')
+		var newSrc;
+		if(lheure>=5 && lheure<8){ // soleil levant (sunrise.jpg)
+			newSrc='sunrise.jpg'
+		}
+		if(lheure>=8 && lheure<17){
+			newSrc='zenith.jpg'
+			monImage.style.borderRadius='20px'
+		}
+		if(lheure>=17 && lheure<22){
+			newSrc='sunset.jpg'
+		}
+		if(lheure>=22 || lheure<5){
+			newSrc='night.jpg'
+		}
+		monImage.src = newSrc;
+
+	let monP1   = document.getElementById('monP1');
+	let pErreur = document.getElementById('erreurSystem');
+
+	var erreur = 'oups';
+
+	if(erreur!=''){
+		monP1.style.display ='none'
+		pErreur.className   ='msg_Erreur';
+		pErreur.innerHTML   = erreur
+	}
+	if(erreur==''){
+		pErreur.style.display='none'
+	}
+
+
+	// petit bonus de fin de journée
+	document.getElementById('logo').className='ma_class'
+
+
+
+
+
+
+
+
+
+
+
+
+
+	</script>
+</html>

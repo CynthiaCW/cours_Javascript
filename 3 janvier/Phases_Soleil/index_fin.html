@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width"> <!-- Taille du viewport à utiliser. Je vous conseiller de copier cette ligne sur tous vos projets -->
+		<link rel="stylesheet" href="sun.css">
+		<title>Conditions & dates</title> <!-- Titre de la page -->
+
+	</head>
+
+	<body>
+		<header>
+	  	<div id="logo">
+	    	<img 
+		    	src="https://www.a2mo.fr/wp-content/uploads/2021/10/placeholder1.png" 
+		    	alt="logo" 
+		    	id="monImage" />
+	  	</div>
+	</header>
+
+	<div class="container">
+
+	  <h1 id='title'>Bienvenue sur mon site !</h1>
+	  <h3 id='subtitle'>Heure courante</h3>
+	  
+	  
+	</div>
+
+	</body>
+	<script>
+		let monImage = document.getElementById('monImage')
+		let monH3 = document.getElementById('subtitle')
+
+		let aujourdhui = new Date()
+		let hh         = aujourdhui.getHours()
+		let mm         = aujourdhui.getMinutes()
+		let ss         = aujourdhui.getSeconds()
+		console.log(hh,mm,ss)
+
+		// hh = 23
+		// format date comme tel hh:mm:ss 
+		if(ss<10){
+			ss="0"+ss
+		}
+		if(mm<10){
+			mm="0"+mm
+		}
+
+		// modifier le contenu d'un élément HTML avec .textContent 
+		monH3.textContent = hh+":"+mm+":"+ss
+
+		// monH3.innerHTML = "<b>Bold en JS </b>"
+
+		if(hh>=5 && hh<10){
+			monImage.src = 'sunrise.jpg'
+		}
+		if( hh>=10 && hh<17 ){
+			monImage.src = 'zenith.jpg'
+		}
+		if(hh>=17 && hh<22){
+			monImage.src = 'sunset.jpg'
+		}
+		if(hh>=22 || hh<5){
+			console.log("C'est la NUIT ")
+			monImage.src = 'night.jpg'
+		}
+		
+
+
+
+
+
+
+
+
+
+
+
+
+		// aparté sur le triple égal 
+
+		let unAge = false
+		// typeof renvoie le type de la variable passée
+		console.log(typeof(unAge))
+
+		if(unAge==="3"){
+			console.log("C'est VRAI 👓")
+		}
+
+
+
+
+	</script>
+</html>

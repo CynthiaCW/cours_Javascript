@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="utf-8"> 
+		<meta name="viewport" content="width=device-width"> 
+		<link rel="stylesheet" href="intro.css">
+		<title> Javascript - classList & querySelector</title> <!-- Titre de la page -->
+	</head>
+
+	<body>
+		<header>
+		  	<div id="logo">
+		    	<img src="jsIcon.jpg" alt="logo" id="monImage"/>
+		  	</div>
+	</header>
+
+	<div class="container">
+
+	 	 <h1> Bienvenue sur mon site !</h1>
+
+	  	<div class='subDiv'>
+	  		<div class='babyDiv' id='divOne'>classList.add()</div>
+	  		<div class='babyDiv alert' id='divTwo'>classList.remove()</div>
+	  		<div class='babyDiv' id='divThree'></div>
+	  	</div>
+
+		<div class='btns'>
+
+			<button id='add'> add </button>
+			<button id='remove'> remove </button>
+			<button id='toggle'> toggle </button>
+
+		</div>
+	</div>
+
+	</body>
+	<script>
+		
+		let monH1 = document.querySelector("h1")
+		let babyDiv = document.querySelectorAll(".subDiv > .babyDiv")
+		let add = document.querySelector("#add")
+		console.log(babyDiv)
+		babyDiv[0].style.backgroundColor ='cyan'
+
+
+		console.log(monH1)
+		
+
+
+		
+	</script>
+</html>

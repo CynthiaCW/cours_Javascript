@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width"> <!-- Taille du viewport à utiliser. Je vous conseiller de copier cette ligne sur tous vos projets -->
+		<link rel="stylesheet" href="bike.css">
+		<title> Function - Code Promo </title> <!-- Titre de la page -->
+
+	</head>
+
+	<body>
+	<header>
+	  	<div id="logo">
+	    	<img src="bikeLogo.jpg" alt="logo" id="monImage"/>
+	  	</div>
+	</header>
+
+	<div class="container" id='centre'>
+
+	  <h1>Bienvenue sur mon site !</h1>
+
+	  <p id='p1'><b>Paragraph #1</b> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+	  <p id='p2'><b>Paragraph #2 </b> Lorem ipsum dolor sit amet, consectetur adipiscing eli	
+	  let codePromo ="CCI"t, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+	</div>
+
+	</body>
+	<script>
+	
+	
+	let codePromo ="CCI"
+	let dehors    = 'dehors 🏔' // en dehors du bloc de prixTotal
+	let dedans = 'une dedans mais finalement dehors'
+	function prixTotal(prix,qty,codeProm){
+		console.log(dehors)
+		let total = prix*qty 
+		let dedans = '🩳' // celle-ci n'est accessible qu'a l'intérieur de son bloc 
+		if(codeProm===codePromo){
+			total = total*0.9
+		}
+		console.log("prix total: "+total)
+	}
+
+
+
+
+	// 5 gateaux à 2€ 
+
+	prixTotal(2,5,'allezLol')
+	console.log(dedans)
+
+	// 10 gateaux à 1€ 
+	prixTotal(1,10,'CCI')
+
+		
+
+	</script>
+</html>

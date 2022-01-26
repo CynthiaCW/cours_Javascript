@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width">
+		<title> Les tableaux (Array) Intro </title>
+	</head>
+	<body>
+	</body>
+	<script>
+		// je crée un nouveau tableau / array 
+		let hobbies = [
+			"vélo",
+			"kayak",
+			"lecture",
+			"dormir"
+		]
+
+
+		let codeSaisie = 'JS'
+
+		let codePromos = ['CCI','EKLYA','YNOV']
+		codePromos.push('Java')
+		console.log(codePromos)
+		console.log(codePromos.includes(codeSaisie))
+
+		if(codePromos.includes(codeSaisie)){
+			// codeSaisie valide car bien dans le tableau 
+		}
+
+
+		// un peu plus "fin", la capacité de chercher la position d'un élément 
+		let pos = codePromos.indexOf('Java')
+		console.log('élément trouvé à la position >', pos)
+		if(pos!=-1){
+			codePromos[pos] = 'JAVASCRIPT'
+			console.log('Trouvé!!')
+		}else{
+			console.log('PAS TROUVE')
+		}
+
+
+		// Finalement EKLYA n'existe plus, ce n'est plus un code promo valide, on l'enlève 
+
+		let posEklya = codePromos.indexOf('EKLYA')
+		console.log('EKLYA est à l\'index :', posEklya)
+		codePromos.splice(posEklya,1)
+
+
+		// comment faire une function utilitaire 
+		// qui cherche et supprime un élément d'un tableau
+		// qlq soit sa position 
+		function supprimer(leArray,element){
+
+			let posElement = leArray.indexOf(element)
+			if(posElement>-1){
+				leArray.splice(posElement,1)
+			}else{
+				console.log('élement introuvable')
+			}
+
+		}
+
+		let pal = "xanax"
+
+		let palArray = pal.split('')
+		console.log(palArray)
+		let palArrayReverse = palArray.reverse()
+		console.log(palArrayReverse)
+
+		if(pal == palArrayReverse.join('')){
+			console.log('%c SUPER PALINDROME', 'background: pink; color: white; display: block;border-radius:4px');
+		}
+
+
+		let allHobbies = [
+			['jonglage','vélo','grs'],
+			['pêche','apéro','makeup']
+		]
+
+		/*allHobbies.push(['jonglage','vélo','grs']) // j'ajoute les hobbies d'une personne 
+
+		allHobbies.push(['pêche','apéro','makeup'])*/
+	
+
+		console.log(allHobbies)
+
+		console.log(allHobbies[1][2])
+
+
+	</script>
+</html>

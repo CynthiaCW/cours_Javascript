@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+
+    <title>Citations - Arrays & Bootstrap & JS -</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="./bootstrap/bootstrap.min.css" rel="stylesheet">
+
+    </link>
+
+  </head>
+  <body>
+
+    <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
+      <h5 class="my-0 mr-md-auto font-weight-normal"> Citations aléatoires </h5>
+    </div>
+
+
+<div class="container">
+
+    <div class="row justify-content-md-center" >
+        <div class="col">
+
+            <div class="card text-center">
+
+				  <div class="card-body">
+				    <h5 class="card-title"> Citation </h5>
+				    <p class="card-text">Ici nous allons charger le contenu de notre citation</p>
+				    <a href="#" class="btn btn-primary">Une nouvelle citation</a>
+				  </div>
+
+			</div>
+
+        </div>
+    </div>
+</div>
+
+
+</body>
+
+<script>
+	// Tableau de citations
+let citations = [
+		  "La vie est un mystère qu'il faut vivre, et non un problème à résoudre. Gandhi",
+		  "Le plus grand risque est de ne prendre aucun risque. Mark Zuckerberg",
+		  "Méritez votre statut de leader chaque jour. Mickael Jordan",
+		  "Soyez le changement que vous voulez voir dans le monde. Gandhi",
+		  "A chaque fois que vous vous retrouvez du même côté que la majorité, il est temps de prendre du recul, et de réfléchir. Mark Twain",
+		  "Seulement ceux qui prendront le risque d’aller trop loin découvriront jusqu’où on peut aller. T.S Elliot",
+		  "Le succès c’est tomber sept fois, se relever huit. Proverbe japonais",
+		  "Dans vingt ans vous serez plus déçus par les choses que vous n’avez pas faites que par celles que vous avez faites. Alors sortez des sentiers battus. Mettez les voiles. Explorez. Rêvez. Découvrez. Mark Twain"
+];
+
+let stockCitations=[]
+	stockCitations.push(...citations) // pour info on utilise ici le "spread"
+
+let laDiv = document.querySelector('.card-text')
+let leBtn = document.querySelector('.btn')
+let cardTitle = document.querySelector('.card-title')
+let nbCitations = citations.length // au chargement 21
+
+console.log(nbCitations)
+
+
+
+leBtn.addEventListener('click',newCitation)
+
+function newCitation(){
+	let nombreAlea    = getRandomInt(0,citations.length)
+	laDiv.textContent = citations[nombreAlea]
+	// ici j'enlève la citation qui vient d'être tirée
+	citations.splice(nombreAlea,1)
+	if(citations.length==0){
+		cardTitle.textContent = "fini:("
+	}else{
+		cardTitle.textContent = "Citations ("+citations.length+")"
+	}
+	
+	
+}
+
+function getRandomInt(min, max) {
+	console.log('un nombre alea entre ',min, 'et ', max)
+  return Math.floor(Math.random() * (max - min)) + min
+}
+
+
+</script>
+
+
+</html>

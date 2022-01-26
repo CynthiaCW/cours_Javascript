@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="utf-8"> 
+		<meta name="viewport" content="width=device-width"> 
+		<link rel="stylesheet" href="intro.css">
+		<title> Javascript - Introduction Dom </title> <!-- Titre de la page -->
+
+	</head>
+
+	<body>
+		<header>
+		  	<div id="logo">
+		    	<img src="jsIcon.jpg" alt="logo" id="monImage"/>
+		  	</div>
+		</header>
+
+		<div class="container">
+
+		  <h1> Bienvenue sur mon site !</h1>
+
+		  <p><b>Paragraph #1</b> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+		  <p><b>Paragraph #2 </b> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		
+		</div>
+
+	</body>
+	<script>
+		let logoDiv  = document.getElementById("logo")		//On déclare la variable - On va chercher l'id 'logo'
+		let monImage = document.getElementById('monImage')  //On déclare la variable - On va chercher l'id 'logo'
+
+			monImage.src = "./img/logoJs.png"
+			monImage.style.height="140px"
+
+		logoDiv.style.padding = "90px"
+		logoDiv.style.backgroundColor = 'cyan'
+		
+		console.log(logoDiv)
+	
+	</script>
+
+</html>

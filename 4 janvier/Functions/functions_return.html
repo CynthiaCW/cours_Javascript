@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width"> <!-- Taille du viewport à utiliser. Je vous conseiller de copier cette ligne sur tous vos projets -->
+		<link rel="stylesheet" href="bike.css">
+		<title>  Les fonctions (avec param et return) </title>
+
+	</head>
+
+	<body>
+	<header>
+	  	<div id="logo">
+	    	<img src="bikeLogo.jpg" alt="logo" id="monImage"/>
+	    	<p id='subLogo'>ici aussi</p>
+	  	</div>
+	</header>
+
+	<div class="container">
+
+	  <h1 id='monH1'>Bienvenue sur mon site ! (là aussi) </h1>
+
+	  <p id='p1'><b>Paragraph #1</b> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+console.log('appZoom')
+	  <p id='p2'><b>Paragraph #2 </b> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+	</div>
+	<div id="maDiv">
+		<span id='footer'> ici aussi  hey</button>
+	</div>
+
+	</body>
+	<script>
+		// pense-bête : nous sommes le 26-04-2021
+		let monH1  = document.getElementById('monH1');
+		let monBtn = document.getElementById('monBtn');
+
+		function dateEnFr(){
+
+			let aujourdhui = new Date()
+			let jour = aujourdhui.getDate()
+			let mois = aujourdhui.getMonth()+1
+			if(mois<10){ 
+				mois='0'+mois
+			} // bonus
+			let annee= aujourdhui.getFullYear()
+
+			let dateFr = jour+'-'+mois+'-'+annee
+			console.log(dateFr)
+			return dateFr // me fait SORTIR de la fonction 
+			console.log('jamais ici')
+			
+
+		}		
+		
+		document.getElementById('footer').textContent  = dateEnFr()
+		document.getElementById('subLogo').textContent = dateEnFr()
+		document.getElementById('monH1').textContent   += dateEnFr()
+
+
+	</script>
+</html>
