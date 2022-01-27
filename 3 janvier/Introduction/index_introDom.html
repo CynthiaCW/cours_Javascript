@@ -27,16 +27,22 @@
 
 	</body>
 	<script>
-		let logoDiv  = document.getElementById("logo")		//On déclare la variable - On va chercher l'id 'logo'
-		let monImage = document.getElementById('monImage')  //On déclare la variable - On va chercher l'id 'logo'
+		//On déclare la variable - On va chercher l'id 'logo'
+		let logoDiv  = document.getElementById("logo")	
+		//On déclare la variable - On va chercher l'id 'image'	
+		let monImage = document.getElementById('monImage')  
 
-			monImage.src = "./img/logoJs.png"
-			monImage.style.height="140px"
+			//On recupere la source de l'image avec la variable monImage 
+			monImage.src = "./img/logoJs.png" 
+			//On modifie la taille de l'image 
+			monImage.style.height="140px" 
 
-		logoDiv.style.padding = "90px"
-		logoDiv.style.backgroundColor = 'cyan'
+		//On change le padding de la div logo 
+		logoDiv.style.padding = "90px" 
+		//On change la couleur de background de la div logo
+		logoDiv.style.backgroundColor = 'cyan' 
 		
-		console.log(logoDiv)
+		console.log(logoDiv) //On affiche la nouvelle div logo avec la nouvelle taille de l'image 
 	
 	</script>
 

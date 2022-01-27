@@ -26,33 +26,46 @@
 
 	</body>
 	<script>
-		var prenom = "Rémi"
-		var nom    = "Enguehard"
-		var hobbie = "Vélo"	
 
+		//On déclare les variables : 
+		let prenom = "Cynthia"
+		let nom    = "Colombel"
+		let hobbie = "Graphisme"
+
+		//On affiche : 
 		console.log("je m'appelle "+prenom+" "+nom+ ", et j'aime le "+hobbie+".")
 
-		var prix = 15 
-		var taxe = 2 
-		
-		var qty  = 3
-		var prixTotal = prix+taxe
+        //--------------------
 
-		console.log("prix total: "+(prix+taxe)+"€")
+		//On déclare les variables : 
+		let prix = 15 
+		let taxe = 2 
+		
+		let qty  = 3
+		 
+		//On déclare la varible prix total -> Donc on reprend les variables prix et taxe
+		let prixTotal = prix+taxe 
+
+		//On affiche le résulat de l'addition prix + taxe 
+		console.log("prix total: "+(prix+taxe)+"€");
+
+		//On affiche le résulat de prix total multiplié par la quantité 
+		console.log((prixTotal*qty)+"€");
+
+		//On affiche le prix total pour 3 produits :
+		console.log("prix total: ",prix+taxe,"€")
+
+
+		console.log(prix,hobbie)
+
+
 		/* 
-			les autres opérateurs 
+			Les autres opérateurs 
 			* : multiplication
 			/ : division
 			- : soustraction 
-
+			+ : addition
 		*/
-		console.log("prix total: ",prix+taxe,"€")
-		console.log(prix,hobbie)
-
-		var permis = false
-		console.log("j'ai le "+permis)
-		var width = "hey "
-
 		
 	</script>
 </html>

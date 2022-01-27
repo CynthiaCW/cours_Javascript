@@ -26,13 +26,19 @@
 
 	</body>
 	<script>
-		let age = 18 
 
+		//Je déclare ma variable age / Pour tester, je change juste ma valeur soit 17
+		let age = 16;
+
+		//Si (ma variable age) est superieur ou egale à 18 ans,
+		// J'affiche Majeur + Voiture
+		// Sinon j'affiche Mineur + Flute
 		if(age>=18){
-			console.log("MAJEUR.E","🚘")
+			console.log("MAJEUR.E","🚘");
 		}else{
-			console.log("MINEUR.E 🎷")
+			console.log("MINEUR.E 🎷");
 		}
+
 		/*
 			Opérateurs de comparaisons 
 			> strictement sup 
@@ -41,7 +47,28 @@
 			>= sup ou égal
 		*/
 
+		// Je déclare ma variable hasPermis, je lui dis qu'elle est vraie
+		let hasPermis = true //Pour tester, je change par true ou false
+
+		//Si (ma variable hasPermis) est vraie,
+		// J'affiche le permis + Voiture
+		// Sinon j'affiche Pas le permis + trotinette
+		if(hasPermis){
+			console.log('le permis !','🚗')
+		}else{
+			console.log('Pas le permis','🛴')
+		}
+
+		let permis = true;
+		console.log("j'ai le "+permis);
+
+		let pasPermis = false;
+		console.log("je n'ai pas le "+pasPermis);
+
+
+		// Je déclare ma variable codePromo qui aura la valeur CCI
 		let codePromo    = "CCI"
+		// Je déclare ma variable saisieClient qui aura la valeur CCI pour bénéficier de la promotion
 		let saisieClient = "CCI"
 
 		let prixTotal = 23 
@@ -52,21 +79,13 @@
 		}
 		console.log('prixTotal > ', prixTotal)
 
-
-		let hasPermis = true 
-
-		if(hasPermis){
-			console.log('le permis !','🚗')
-		}else{
-			console.log('Pas le permis','🛴')
-		}
-
+/*
 		let isAdmin = false
 
 		if(isAdmin!=true){
 			console.log('PAS ADMIN')
 		}
-
+*/
 
 
 	</script>
