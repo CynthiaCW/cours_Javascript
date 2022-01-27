@@ -26,7 +26,8 @@
 
 	</body>
 	<script>
-
+		console.log ('--------------------------'); //POUR SEPARER LE CODE DANS LA CONSOLE
+		
 		//Je déclare ma variable age / Pour tester, je change juste ma valeur soit 17
 		let age = 16;
 
@@ -39,6 +40,7 @@
 			console.log("MINEUR.E 🎷");
 		}
 
+		//------------------------------------------------------------------------------------
 		/*
 			Opérateurs de comparaisons 
 			> strictement sup 
@@ -46,6 +48,9 @@
 			<= inférieur ou égal
 			>= sup ou égal
 		*/
+
+		//------------------------------------------------------------------------------------
+		console.log ('--------------------------'); //POUR SEPARER LE CODE DANS LA CONSOLE
 
 		// Je déclare ma variable hasPermis, je lui dis qu'elle est vraie
 		let hasPermis = true //Pour tester, je change par true ou false
@@ -65,27 +70,73 @@
 		let pasPermis = false;
 		console.log("je n'ai pas le "+pasPermis);
 
+		//------------------------------------------------------------------------------------
+		console.log ('--------------------------'); //POUR SEPARER LE CODE DANS LA CONSOLE
 
 		// Je déclare ma variable codePromo qui aura la valeur CCI
 		let codePromo    = "CCI"
 		// Je déclare ma variable saisieClient qui aura la valeur CCI pour bénéficier de la promotion
 		let saisieClient = "CCI"
-
+		//Je déclare ma variable prixTotal qui aura la valeur 23€
 		let prixTotal = 23 
 
-		if(codePromo == saisieClient){
-			prixTotal -= 2
-			console.log('OUAIS CODE PROMO VALIDE')
+		// Si codePromo est strictement égale saisieClient
+		// Faire la réduction avec la promotion de -2€
+		// Afficher "Code promo valide, tu as droit à -2€"
+		if(codePromo === saisieClient){
+			prixTotal = (prixTotal -2) //prixTotal-= 2 //prixTotal = prixTotal + 4
+			console.log('Code promo valide, tu as droit à -2€') 
 		}
-		console.log('prixTotal > ', prixTotal)
+		console.log('prixTotal : ', prixTotal+'€') //Afficher le résultat de prixTotal : 21€
 
-/*
+		//------------------------------------------------------------------------------------
+		console.log ('--------------------------'); //POUR SEPARER LE CODE DANS LA CONSOLE
+
+		// TEST : Si le client ne remplie pas le bon code promo qui est 'janvierPromo'
+
+		let codeePromo = 'janvierPromo';
+		let saisieeClient = 'janvierPromo';
+
+		if (codeePromo===saisieeClient){
+			console.log("Code promo valide, tu as droit à -2€")
+
+		} else {
+			console.log("Code Promo Invalide, Désolé")
+		};
+
+		//------------------------------------------------------------------------------------
+		console.log ('--------------------------'); //POUR SEPARER LE CODE DANS LA CONSOLE
+
+		 // COMBINAISON DE CODE PROMO VALIDE ET INVALIDE
+
+		 // Je déclare ma variable codePromo qui aura la valeur CCI
+		let codeeePromo    = "CCI2"
+		// Je déclare ma variable saisieClient qui aura la valeur CCI pour bénéficier de la promotion
+		let saisieeeClient = "CY"
+		//Je déclare ma variable prixTotal qui aura la valeur 23€
+		let prixxTotal = 23 
+
+		// Si codePromo est strictement égale saisieClient
+		// Faire la réduction avec la promotion de -2€
+		// Afficher "Code promo valide, tu as droit à -2€"
+		if(codeeePromo === saisieeeClient){
+			prixxTotal = (prixxTotal -2) //prixTotal-= 2 //prixTotal = prixTotal + 4
+			console.log('Code promo valide, tu as droit à -2€') 
+			console.log('prixTotal : ', prixxTotal+'€') //Afficher le résultat de prixTotal : 21€
+
+		} else {
+			console.log('Code Promo Invalide, Désolé');
+		}
+		
+		//---------------------------------------------------------------------------------------------------
+		console.log ('--------------------------'); //POUR SEPARER LE CODE DANS LA CONSOLE
+
 		let isAdmin = false
 
 		if(isAdmin!=true){
 			console.log('PAS ADMIN')
-		}
-*/
+		};
+
 
 
 	</script>
