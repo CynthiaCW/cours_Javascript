@@ -1,3 +1,7 @@
+  
+  
+  //
+  
   const TREKS = [
     'Kilimanjaro',
     'Everest',
@@ -6,7 +10,8 @@
     'Denali',
     'Popocatepetl',
     'Mont Blanc',
-    'Queyra'
+    'Queyra',
+    'Mont Thou'
   ];
 
 
@@ -22,6 +27,7 @@ for (var i = 0; i < TREKS.length; i++) {
     
     console.log(leTrek)
 }
+
 let cardBody = document.querySelector('.card-body')
 
 document.querySelector('.card-body').append(leUl)  
