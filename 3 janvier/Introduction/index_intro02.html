@@ -26,24 +26,53 @@
 
 	</body>
 	<script>
+				//---------------------------------------------------------------------------------------------------------
+
+		// Je déclare la variable prix velo en €
 		let prixVelo = 800 
-		let budget   = 800
+		// Je déclare la variable prix velo en €
+		let budget = 800
+		// Je déclare la variable prix velo en €
+		let isOpen = false
 
-		let isOpen   = false
+		// Opérateurs logiques  AND  && 
 
-		// opérateurs logiques  AND  && 
-		if(budget>=prixVelo && isOpen==true){
+		// Si budget (800€) est superieur ou égale au prix du vélo  && si isOpen est egale à true 
+		// alors afficher New Bike day!
+		// Sinon afficher économisons encore
+
+		if(budget>=prixVelo && isOpen===true){ // If isOpen === true -> Affichage de 'économisons encore'
 			console.log('New Bike day!')
-		}else{
-			console.log('économisons encore')
+
+		} else{
+			console.log('économisons encore')  
 		}
 		
-		// opérateurs logiques  OR  || 
+		// If isOpen === false -> Affichage de 'New Bike Day'
+		if(budget>=prixVelo && isOpen===false){ 
+			console.log('New Bike day!')
+
+		} else{
+			console.log('économisons encore')  
+		}
+		
+		//---------------------------------------------------------------------------------------------------------
+
+		console.log('------------------------------------------')
+
+		// Opérateurs logiques  OR  || 
+
+		// Je déclare la variable isDirector est vraie
 		let isDirector = true 
 
+		// Si budget (800€) est superieur ou égale au prix du vélo  OU si isOpen est egale à true 
+		// alors afficher New Bike day!
+		// Sinon afficher 'Pas le budget et en plus pas director'
+
 		if(budget>=prixVelo || isDirector) {
-			console.log('New Bike day!')
-		}else{
+			console.log('New Bike day!') // <--- Affiche 'New bike day' dans la console
+
+		} else{
 			console.log('Pas le budget et en plus pas director')
 		}
 
