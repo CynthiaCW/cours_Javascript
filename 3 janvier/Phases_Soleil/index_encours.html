@@ -21,18 +21,28 @@
 	<div class="container">
 
 	  <h1 id='title'>Bienvenue sur mon site !</h1>
-	  <h3 id='subtitle'>Heure courante</h3>
+	  <h3 id='subtitle'>Heure </h3>
 	  
 	</div>
 
 	</body>
 	<script>
+
+		// On déclare la variable monImage et on va chercher l'id de monImage 
 		let monImage = document.getElementById('monImage')
 
+		//On déclare la variable aujourd'huit qui va renvoyer la date d'aujourd'hui
 		let aujourdhui = new Date()
-		let hh         = aujourdhui.getHours()
-		console.log(hh)
 
+		let hh = aujourdhui.getHours() //On déclare la variable hh qui renverra l'heure qu'il est aujourd'hui
+		let mm = aujourdhui.getMinutes() //On déclare la variable mm qui renverra les minutes d'aujourd'hui
+		let scd = aujourdhui.getSeconds() //On déclare la variable scd qui renverra les minutes d'aujourd'hui
+
+		console.log(hh,'h',mm,'min',scd,'secondes') // On affiche l'heure, les minutes et les secondes
+
+		/* CONSIGNES : En fonction des 4 phases du soleil, changer de photos */
+
+		// Si l'heure est superieur ou egal a 9 ET inferieur ou egale a 17, aller chercher la source de ma variable monImage et lui assigner une photo
 		if( hh>=9 && hh<17 ){
 			monImage.src = 'zenith.jpg'
 		}

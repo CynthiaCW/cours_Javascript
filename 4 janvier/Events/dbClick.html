@@ -25,12 +25,15 @@
 
 	</body>
 	<script>
-		let card = document.querySelector('aside');
-			card.addEventListener('dblclick', zoomZoom);
+
+
+		let card = document.querySelector('aside'); //<-- Correspond a la balise <aside> qu'on va chercher avec un querySelector
+			card.addEventListener('dblclick', zoomZoom); // 'dblclick' correspond à un evenement 
 			
 		function zoomZoom(){
-			card.classList.toggle('large');
-		}
+			card.classList.toggle('large'); // Alternative à la propriété element.className qui renvoie une chaine composée de la liste des classes, séparées par des espaces.
+			console.log(zoomZoom)			// .toggle est la combinaison de add et remove
+		}									
 
 
 	</script>

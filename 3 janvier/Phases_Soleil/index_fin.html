@@ -28,26 +28,32 @@
 
 	</body>
 	<script>
+		
+		// On déclare la variable monImage et on va chercher l'id de monImage 
 		let monImage = document.getElementById('monImage')
+		// On déclare la variable monH3 et on va chercher l'id de subtitle de heure courante  
 		let monH3 = document.getElementById('subtitle')
 
+		//On déclare la variable aujourd'huit qui va renvoyer la date d'aujourd'hui
 		let aujourdhui = new Date()
-		let hh         = aujourdhui.getHours()
-		let mm         = aujourdhui.getMinutes()
-		let ss         = aujourdhui.getSeconds()
-		console.log(hh,mm,ss)
+
+		let hh = aujourdhui.getHours() //On déclare la variable hh qui renverra l'heure qu'il est aujourd'hui
+		let mm = aujourdhui.getMinutes() //On déclare la variable mm qui renverra les minutes d'aujourd'hui
+		let scd = aujourdhui.getSeconds() //On déclare la variable scd qui renverra les minutes d'aujourd'hui
+
+		console.log(hh,'h',mm,'min',scd,'secondes') // On affiche l'heure, les minutes et les secondes
 
 		// hh = 23
-		// format date comme tel hh:mm:ss 
-		if(ss<10){
-			ss="0"+ss
+		// format date s'affiche comme tel hh:mm:ss 
+		if(scd<10){
+			scd="0"+scd
 		}
 		if(mm<10){
 			mm="0"+mm
 		}
 
 		// modifier le contenu d'un élément HTML avec .textContent 
-		monH3.textContent = hh+":"+mm+":"+ss
+		monH3.textContent = hh+":"+mm+":"+scd
 
 		// monH3.innerHTML = "<b>Bold en JS </b>"
 
@@ -55,6 +61,7 @@
 			monImage.src = 'sunrise.jpg'
 		}
 		if( hh>=10 && hh<17 ){
+			console.log("C'est la JOurnée ")
 			monImage.src = 'zenith.jpg'
 		}
 		if(hh>=17 && hh<22){
@@ -66,17 +73,6 @@
 		}
 		
 
-
-
-
-
-
-
-
-
-
-
-
 		// aparté sur le triple égal 
 
 		let unAge = false
@@ -86,6 +82,8 @@
 		if(unAge==="3"){
 			console.log("C'est VRAI 👓")
 		}
+
+		//
 
 
 

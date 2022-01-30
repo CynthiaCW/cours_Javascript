@@ -29,10 +29,12 @@
 	</body>
 	<script>
 	
-	
+	// On déclare 3 variables
 	let codePromo ="CCI"
 	let dehors    = 'dehors 🏔' // en dehors du bloc de prixTotal
 	let dedans = 'une dedans mais finalement dehors'
+
+	// On déclare la fonction prixTotal avec 3 parametres (prix,qty,codeProm)
 	function prixTotal(prix,qty,codeProm){
 		console.log(dehors)
 		let total = prix*qty 
@@ -40,19 +42,15 @@
 		if(codeProm===codePromo){
 			total = total*0.9
 		}
-		console.log("prix total: "+total)
+		console.log("prix total: "+total+'€')
 	}
 
-
-
-
-	// 5 gateaux à 2€ 
-
-	prixTotal(2,5,'allezLol')
+	// 5 gateaux à 2€ (prix*qty)
+	prixTotal(2,5,'allezLol') // Affiche le prix total sans promo car le code promo est invalide -> 10€
 	console.log(dedans)
 
-	// 10 gateaux à 1€ 
-	prixTotal(1,10,'CCI')
+	// 10 gateaux à 1€ (prix*qty)
+	prixTotal(1,10,'CCI') 	 // Affiche le prix total avec promo car le code promo est valide -> 9€
 
 		
 

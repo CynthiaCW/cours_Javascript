@@ -51,19 +51,20 @@
 
 	<script>
 
- 		// je déclare ma function 
+ 		// je déclare ma function changeColor avec trois paramètres (divId,divColor,textColor)
 
 		function changeColor(divId,divColor,textColor){
-			let laDiv = document.getElementById(divId)
-				laDiv.style.backgroundColor=divColor
-				laDiv.style.color = textColor
+			let laDiv = document.getElementById(divId) 	//<-- Je vais chercher tous les éléments div qui ont un Id
+				laDiv.style.backgroundColor=divColor    //<-- Je déclare a quoi mes parametres correspondent
+				laDiv.style.color = textColor 			//<-- ""
 				laDiv.style.fontWeight='bold'
 				laDiv.style.padding='5px'
-				laDiv.style.borderRadius='4px'
+				laDiv.style.borderRadius='4px'  		//<-- Je change leurs styles
 		}
 
-		// j'execute ma function en lui passant le param attendu
-		changeColor("maDiv3","blue","white") 
+		// j'execute ma function en lui passant les paramètres attendus
+
+		changeColor("maDiv3","blue","white")            //<-- changeColor("idDeMaDiv","colorDeMaDiv","colorDeMonTexte")
 		changeColor("maDiv6","lime","rgba(210,45,34,0.3)")
 
 

@@ -56,27 +56,26 @@
 		// si un code promo est fourni et valide,
 		// on applique -10% sur le total 
 
+		// On déclare la fonction prixTotal avec 3 parametres (prix,qty,codePromoSaisi)
 		function prixTotal(prix,qty,codePromoSaisi){
 			let prixFinal   = prix*qty
 			let prixCalcule = prixFinal
 
 			if(codePromo == codePromoSaisi){
-				prixCalcule = prixFinal*0.9
+				prixCalcule = prixFinal*0.9  //0.9 correspond à -10%
 			}
 			console.log("total à payer : "+prixCalcule+"€")
 
-			
 		}
 
-		// premier test avec 5 biscuits à 3e 
-		// et code promo invalide 
 
-		prixTotal(3,5,'fichtre')
+		// premier test avec 5 biscuits à 3€
 		
-		// deuxième test avec 2 hoodies a 50 
-		// et code promo valide 
+		prixTotal(3,5,'mauvaisCodePromo') // Affiche le prix total sans promo car le code promo est invalide -> 15€
+		
+		// deuxième test avec 2 hoodies a 50€
 
-		prixTotal(50,2,"DesignerWeb")
+		prixTotal(50,2,"DesignerWeb")    // Affiche le prix total avec promo car le code promo est valide -> 90€
 
 
 

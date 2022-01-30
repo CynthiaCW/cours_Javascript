@@ -21,19 +21,23 @@
 	  <p id='monP1'>
 		Un petit paragraphe quand tout va bien 💃
 	  </p>
+	  <!--
 	  <p id='erreurSystem'>
 		🤷‍♀️ Attention il y a une petite erreur dans le système a injection
-	  </p>
+	  </p>-->
 
 	</div>
 	</body>
 	<script>
+
+		// On déclare la variable monImage et on va chercher l'id de monImage 
 		// on crée ou on instancie un objet Date()
 		let aujourdhui = new Date()
 		var lheure   = aujourdhui.getHours();
-		console.log(aujourdhui);
-		var dateIso  = aujourdhui.toISOString();
-		console.log(dateIso); // une string
+			console.log(aujourdhui);
+
+		var dateIso  = aujourdhui.toISOString(); //envoie une chaîne de caractères au format ISO :YYYY-MM-DDTHH:mm:ss.sssZ (Le fuseau horaire est toujours UTC)
+			console.log(dateIso); // une string
 		document.getElementById('title').innerHTML =dateIso.substr(0,10);
 
 		var monImage = document.getElementById('monImage')
@@ -53,6 +57,8 @@
 		}
 		monImage.src = newSrc;
 
+
+		/*
 	let monP1   = document.getElementById('monP1');
 	let pErreur = document.getElementById('erreurSystem');
 
@@ -61,12 +67,12 @@
 	if(erreur!=''){
 		monP1.style.display ='none'
 		pErreur.className   ='msg_Erreur';
-		pErreur.innerHTML   = erreur
+		pErreur.innerHTML   = erreur  // .innerHtml permet de créer des balises html dans le paragraphe erreur systeme 
 	}
 	if(erreur==''){
 		pErreur.style.display='none'
 	}
-
+	*/
 
 	// petit bonus de fin de journée
 	document.getElementById('logo').className='ma_class'

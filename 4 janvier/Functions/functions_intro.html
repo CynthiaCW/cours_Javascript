@@ -35,28 +35,29 @@
 		console.log("j'allume le four a 180°")
 	}
 
-	// je déclare une fonction plus versatile avec un premier paramètre
+	// j'appelle ma fonction
+	allumeFour180()
+
+	//---------------------------------------------------------------------
+
+	// je déclare une fonction plus versatile avec un 2 paramètres (température et unité)
 	function allumeFour(temperature,unite){
-		console.log(unite);
-		if(unite=='celsius'){
+		//console.log(unite);
+		if(unite==='celsius'){
 			console.log("j'allume le four à "+temperature+"°C")
-		}else if(unite=='farhenheit'){
+		}else if(unite==='farhenheit'){
 			console.log("j'allume le four à "+temperature+"°F")
 		}else{
 			console.log('merci de préciser une unité')
 		}
-
 	}
 
-	// j'appelle ma fonction
-	allumeFour180()
+	allumeFour(40,'celsius')
 
-	allumeFour(30,'celsius')
+	//---------------------------------------------------------------------
 
-
-
-	function changeCouleur( elemId , couleur, erreur=false){
-		let elem = document.getElementById(elemId)
+	function changeCouleur( elemId , couleur, erreur=false){ 
+		let elem = document.getElementById(elemId)  //<------- Recupere tous les elements avec un ID
 		if(erreur){
 			elem.style.backgroundColor = 'red';
 			elem.innerHTML = erreur;

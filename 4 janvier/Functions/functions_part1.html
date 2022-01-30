@@ -37,34 +37,41 @@
 
 	</body>
 	<script>
-		// je déclare ma fonction 
+		// je déclare ma fonction bonjour sans parametre
 		function bonjour(){
-			console.log("hey salut salut")
+			console.log("hey salut")
 		}
-		// j'execute/ j'appelle ma fonction 
+		// j'execute / j'appelle ma fonction pour que le résultat s'affiche dans la console
 		bonjour()
+
 
 		function allumeFour180(){
 			console.log("j'allume le four à 180°")
 		}
 		
 		allumeFour180()
-		// je déclare une function avec UN paramètre
+
+		//---------------------------------------------------------------------
+
+
+		// je déclare une function avec UN paramètre -> function nomDeLaFunction(nomDuParametre){instructions}
 
 		function allumeFour(temperature){
 
 			if(temperature<0 || temperature>300){
-				console.log("🚨 merci de renseigner une temp entre 0 et 300")
+				console.log("🚨 merci de renseigner une température entre 0 et 300")
 			}else{
-				console.log("j'allume le four à "+temperature+"°C")
+				console.log("j'allume le four à " +temperature+ "°C")
 			}
-
-
 		}
+
 		// j'execute la fonction qui attend un paramètre et un seul
-		allumeFour(180)
-		allumeFour(-150)
-		allumeFour(301)
+
+		allumeFour(150) //  -> Affiche dans la console "j'allume le four à 150°C"
+		allumeFour(-150) // -> Affiche dans la console "merci de renseigner une température entre 0 et 300"
+		allumeFour(301) // -> -> Affiche dans la console "merci de renseigner une température entre 0 et 300"
+
+		//---------------------------------------------------------------------
 
 		let etCelleLa = "hey"
 
@@ -74,7 +81,7 @@
 			console.log("j'allume le four à "+temperature+"°C pendant "+duree+" min")
 		}
 		
-
+		// j'execute la fonction qui attend 2 paramètres (température et durée)
 		allumeFourTemps(140,30)
 
 

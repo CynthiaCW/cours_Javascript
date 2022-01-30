@@ -26,18 +26,25 @@
 
 	</body>
 	<script>
+
+		//je déclare la variable monImage  et je vais chercher son id
 		let monImage = document.getElementById('monImage')	
+
+		// je déclare la variable p et je vais cherche son id - Permet d'afficher la talle
 		let p = document.getElementById('taille')
+		
+		//je déclae l'évenement de monImage,addEventListener -> Au click sur l'image, la taille apparait (nomDeMaVariable,addEventListener('click',nomDeMonEvenement))
 		monImage.addEventListener('click',testEvent)
+
 
 		function testEvent(){
 			console.log('testEvent')
 			let w = monImage.width
 			let h = monImage.height
-			p.textContent = h+'px X '+w+'px'
+			p.textContent = h+'px X '+w+'px' //<-- Remplace le texte dans la balise p et affiche la la lareur et la hauteur de l'image 
 		}
 
-		testEvent()
+		testEvent()  //<-- J'appelle ma function
 
 
 

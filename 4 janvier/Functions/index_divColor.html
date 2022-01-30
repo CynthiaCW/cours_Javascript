@@ -30,11 +30,11 @@
 
 
 		function beautify(id,bgColor,fontColor='grey'){
-			let elem = document.getElementById(id)
+			let elem = document.getElementById(id)		//<------- Recupere tous les elements avec un ID
 				elem.style.padding = '15px'
 				elem.style.borderRadius='20px'
-				elem.style.backgroundColor = bgColor
-				elem.style.color = fontColor
+				elem.style.backgroundColor = bgColor   //<-- Je déclare a quoi mes parametres correspondent
+				elem.style.color = fontColor		   //<-- ""
 		}
 
 		beautify("p1","lime","white")

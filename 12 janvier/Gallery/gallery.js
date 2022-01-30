@@ -63,7 +63,7 @@ function startDiaporama(){
 	}else{
 		isPlaying = true
 		playBtn.textContent = '⏸'
-		intervalID = setInterval(nextImage, 1500) 
+		intervalID = setInterval(nextImage, 1500) //<--!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! 1500?
 	}
 
 	

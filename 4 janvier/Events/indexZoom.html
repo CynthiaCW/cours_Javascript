@@ -25,7 +25,43 @@
 	</div>
 
 	</body>
-	<script src='appZoom.js'>
+	<script>
+			//Je déclare mes 3 variables et je récupère leurs Id
+		let monImage = document.getElementById('monImage')
+		let btnPlus  = document.getElementById('btnPlus')
+		let btnMoins = document.getElementById('btnMoins')
 
+		//je déclare l'évenement de btnPlus.addEventListener -> A chaque 'click' sur le bouton plus, l'image s'agrandit (nomDeMaVariable,addEventListener('click',nomDeMonEvenement))
+		//							btnMoins.addEventListener -> A chaque 'click' sur le bouton moins, l'image se reduit
+		btnPlus.addEventListener('click',zoomIn)
+		btnMoins.addEventListener('click',zoomOut)
+
+		let scale = 1  //permet de modifier la taille d'un élément avec un facteur d'échelle sur deux dimensions
+
+		function testEvent(){
+			console.log('via addEventListener')
+		}
+
+		// je cree une fonction qui permet de voir le resultat à l'echelle du scale en partant de 1 + 0.2 lorsque je zoom
+		function zoomIn(){
+			// monImage.style.width = (monImage.width+10)+'px'
+			scale+=0.02
+			monImage.style.transform ='scale('+scale+')'
+
+			console.log(monImage.style.transform)
+
+		}
+
+		// je cree une fonction qui permet de voir le resultat à l'echelle du scale en partant de 1 - 0.2 lorsque je dézoome
+		function zoomOut(){
+			scale-=0.02
+			monImage.style.transform ='scale('+scale+')'
+			// console.log('ça zooom')
+		}
+
+
+		// onclick 
+
+		// css scale() !
 	</script>
 </html>
