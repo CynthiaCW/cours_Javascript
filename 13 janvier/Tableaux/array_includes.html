@@ -22,7 +22,7 @@
 		let codePromos = ['CCI','EKLYA','YNOV']
 		codePromos.push('Java')
 		console.log(codePromos)
-		console.log(codePromos.includes(codeSaisie))
+		console.log(codePromos.includes(codeSaisie)) // permet de déterminer si un tableau contient une valeur et renvoie true si c'est le cas, false sinon.
 
 		if(codePromos.includes(codeSaisie)){
 			// codeSaisie valide car bien dans le tableau 
@@ -38,14 +38,14 @@
 		}else{
 			console.log('PAS TROUVE')
 		}
-
+	
 
 		// Finalement EKLYA n'existe plus, ce n'est plus un code promo valide, on l'enlève 
 
 		let posEklya = codePromos.indexOf('EKLYA')
 		console.log('EKLYA est à l\'index :', posEklya)
-		codePromos.splice(posEklya,1)
-
+		codePromos.splice(posEklya,1)				//J'enleve la posEklya une seule fois (1) --Avec splice()
+		console.log(codePromos)
 
 		// comment faire une function utilitaire 
 		// qui cherche et supprime un élément d'un tableau
@@ -54,7 +54,7 @@
 
 			let posElement = leArray.indexOf(element)
 			if(posElement>-1){
-				leArray.splice(posElement,1)
+				leArray.splice(posElement,1)		//J'enleve la posEklya une seule fois (1) --Avec slice()
 			}else{
 				console.log('élement introuvable')
 			}

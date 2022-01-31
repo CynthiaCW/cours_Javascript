@@ -34,20 +34,17 @@ if
     let valeurChiffreE = "Ouiiii, c'est la bonne réponse" // Si le résultat est egale au nombre aléatoire
         
     // leBtn.addEventListener('click',valeurChiffreG, valeurChiffreP, valeurChiffreP);
-
+/*
     function verification(){
         if (val<nbAletoire) {
             valeurChiffreG = chpTxt.value('Chiffre trop grand');
-        } else 
-
-            if (val>nbAletoire) {
+        } else if (val>nbAletoire) {
                 valeurChiffreP = chpTxt.value('Chiffre trop petit');
             } 
-                while (val===nbAletoire) {
+                else (val===nbAletoire) {
                     valeurChiffreP = chpTxt.value("Ouiiii, c'est la bonne réponse");
             }
-
-    };
+    }*/
     
 
 

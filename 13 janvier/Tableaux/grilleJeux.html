@@ -95,6 +95,7 @@
     let col = LEVEL[i]
     for (var k = 0; k < col.length; k++) {
       const uneTile = document.createElement('div')
+      
       uneTile.classList.add('tile');
       if(LEVEL[i][k]=='.'){ // petite astuce pour l'alternance des blancs et des noirs
          uneTile.classList.add('black');

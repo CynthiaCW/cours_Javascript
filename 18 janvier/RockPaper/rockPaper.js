@@ -41,8 +41,6 @@ allBtns[1].addEventListener('click',function(){
 
 })
 
-
-
 // cette fonction "lance un dé"
 
 function getRandomInt(max) {

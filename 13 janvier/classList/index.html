@@ -40,31 +40,36 @@
 
 
 	<script>
+
+		//On déclare les variables des Div
 		let divOne = document.getElementById('divOne')
 		let divTwo = document.getElementById('divTwo')
 		let divThree = document.getElementById('divThree')
 		
+		//-----------------------------------------------------------
 
-		// retirer une classe 
-		
-		
-
+		//On déclare les variables des boutons
 		let add = document.getElementById('add')
 		let remove = document.getElementById('remove')
 		let toggle = document.getElementById('toggle')
 
+		//On veut ajouté un event au click
 		add.addEventListener('click',addClass)
 		remove.addEventListener('click',removeClass)
 		toggle.addEventListener('click',toggleClass)
 
+		//On crée une function
 		function addClass(){
-			divOne.classList.add('success')		// ajouter une classe 
+			divOne.classList.add('success')	
+			console.log('Add succes')	// ajouter une classe 
 		}
 		function removeClass(){
-			divTwo.classList.remove('alert')	// Retirer une classe
+			divTwo.classList.remove('alert')
+			console.log('remove alert')	// Retirer une classe
 		}
 		function toggleClass(){
 			divThree.classList.toggle('highlight')	// ajouter et retirer une classe en clickant 2 fois 
+			console.log('toggle add+remove')
 		}
 
 		

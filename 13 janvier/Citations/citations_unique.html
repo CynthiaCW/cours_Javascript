@@ -62,19 +62,19 @@ let stockCitations=[]
 let laDiv = document.querySelector('.card-text')
 let leBtn = document.querySelector('.btn')
 let cardTitle = document.querySelector('.card-title')
-let nbCitations = citations.length // au chargement 21
+let nbCitations = citations.length // au chargement 21 // On recupere le nb de citation en fonction de la longueur
 
 console.log(nbCitations)
 
 
 
-leBtn.addEventListener('click',newCitation)
+leBtn.addEventListener('click',newCitation) // On définit un evenemtn : Au click on affiche une nouvelle citation
 
 function newCitation(){
-	let nombreAlea    = getRandomInt(0,citations.length)
+	let nombreAlea    = getRandomInt(0,citations.length) //Grace a un nombre aléeatoire
 	laDiv.textContent = citations[nombreAlea]
 	// ici j'enlève la citation qui vient d'être tirée
-	citations.splice(nombreAlea,1)
+	citations.splice(nombreAlea,1)						//splice : ??????????? 
 	if(citations.length==0){
 		cardTitle.textContent = "fini:("
 	}else{
@@ -84,6 +84,7 @@ function newCitation(){
 	
 }
 
+// Cette function permet de récupérer un nombre aléatoire
 function getRandomInt(min, max) {
 	console.log('un nombre alea entre ',min, 'et ', max)
   return Math.floor(Math.random() * (max - min)) + min
