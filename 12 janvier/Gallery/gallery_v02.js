@@ -61,7 +61,7 @@ let isPlaying = false
 // on set donc à false 
 
 // on crée l'interval en dehors de la fonction à l'initialisation
-let intervalID = 0 //!!!!!!!!!!!!!!!!!!!!!P O U R Q U O I!!!!!!!!!!!!!!!!!!!! 0?
+let intervalID = 0 //pourquoi 0 ? C'est comme ca
 
 function startDiaporama(){
 

@@ -49,7 +49,7 @@ function checkPassword(){
 		pBar.style.backgroundColor='red'
 		spanInfo.textContent='faible'
 		pwdStrenght = 'faible'
-		okBtn.disabled= true
+		okBtn.disabled= true  // element désactivé ? vrai  -> Non actif
 	}
 	if(pwdL>=5 && pwdL<=8){
 		// moyen 
@@ -57,7 +57,7 @@ function checkPassword(){
 		pBar.style.backgroundColor='yellow'
 		pBar.style.width = "50%"
 		pwdStrenght = 'modéré'
-		okBtn.disabled= false
+		okBtn.disabled= false // element désactivé ? faux  -> Actif
 	}
 	if(pwdL>8){
 		//fort
