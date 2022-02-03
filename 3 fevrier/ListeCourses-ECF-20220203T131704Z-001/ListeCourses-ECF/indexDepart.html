@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+
+    <title> Ma Liste de courses </title>
+
+    <script src="https://kit.fontawesome.com/26c1d388d0.js" crossorigin="anonymous"></script>
+    
+    <!-- Bootstrap core CSS -->
+    <link href="bootstrap/bootstrap.min.css" rel="stylesheet">
+    <style>
+
+      html, body {
+          min-width: 500px;
+      }
+      .infos{
+          font-size: 12px;
+          color:grey;
+          padding-top:10px;
+      }
+      .divList {
+          padding:10px;
+          padding-left:20px;
+          border-radius:3px;
+          margin-bottom:5px;
+          background-color: cyan;
+      }
+
+    </style>
+  </head>
+  <body>
+
+
+<div class="container">
+
+  <div class="row justify-content-center mt-5">
+     <h3> Ma Liste de courses 🛒</h3>
+  </div>
+
+  <div class="row justify-content-center mt-5 mb-4">
+    <div class="col-lg-8">
+      <div class="bg-light p-5 shadow">
+
+        <form id="formulaire">
+          <div class="row">
+            <div class="col">
+              <input id="chmpList" class="form-control" placeholder="Que dois-je acheter?" />
+            </div>
+            <button type="button" class="btn btn-primary mr-2">Ajouter</button>
+            <button type="button" class="btn btn-danger">❌ Tout suppr</button>
+          </div>
+          <div class='infos'>📌 Merci d'ajouter un élément</div>
+        </form>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="row justify-content-center">
+    <div class="col-lg-8">
+      <!--<i class="far fa-trash-alt"></i>-->
+    </div>
+  </div>
+
+</div>
+<script src='coursesApp.js'></script>
+</body>
+
+</html>

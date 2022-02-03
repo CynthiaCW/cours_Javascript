@@ -1,0 +1,20 @@
+1. console.log() affiche toutes les données sensibles - Elle peuvent etre récupérés à des fins malveillante
+
+2. string en chiffre = NAN
+
+4. L'ordre des parametres qui priment
+
+5. la fonction n'a pas été appellé
+
+7. 20, 18, ... On décrémente
+
+8. C'est une data structure
+
+TEAMS[1]['serviceTeams']
+
+for( k=0; k<TEAMS[1]['serviceTeams'].length; k++){
+    console.log(service[k])
+};
+
+
+
